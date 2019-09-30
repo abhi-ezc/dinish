@@ -32,21 +32,56 @@
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4">
-                <form>
+                <form method="POST" action="/admin/valuation/add">
                     <div class="row">
+
+                        <label class="form-text">Student</label>
+                        <input class="form-control" type="text" name="student">
+                        <br>
                         <label class="form-text">First Person</label>
-                        <input type="text"  class="form-control" name="firstPerson" id="firstPerson">
+                        <select  class="form-control" name="First" id="First">
+                            <%
+                                for(teacher of data)
+                                {
+                                    %>
+                                    <option><%=teacher.name%></option>
+                                    <%
+                                }
+                            %>      
+                        </select>
                         <br>
                     </div>
                     <div class="row">
                         <label  class="form-text">Second Person</label>
-                        <input class="form-control" type="text" name="secondPerson" id="secondPerson">
+                        <select  class="form-control" name="Second" id="Second">
+                            <%
+                                for(teacher of data)
+                                {
+                                    
+                                    %>
+                                    <option><%=teacher.name%></option>
+                                    <%
+                                }
+                            %>      
+                        </select>
                         <br>
                     </div>
                     <div class="row">
                         <label class="form-text">Third Person</label>
-                        <input class="form-control" type="text" name="thirdPerson" id="thirdPerson">
+                        <select  class="form-control" name="Third" id="Third">
+                            <%
+                                for(teacher of data)
+                                {
+                                    
+                                    %>
+                                    <option><%=teacher.name%></option>
+                                    <%
+                                }
+                            %>      
+                        </select>
                         <br>
+                        <br>
+                        <button class="btn btn-success form-control" type="submit">Submit</button>
                     </div>
 
                 </form>
