@@ -59,6 +59,7 @@ function router(nav)
         };
         let valuation=new valuationData(val);
         valuation.save();
+        res.redirect('/admin/valuation')
         
     })
     
